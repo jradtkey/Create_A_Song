@@ -1,0 +1,65 @@
+@media only screen and (max-width: 480px) {
+    .container-fluid {
+      background: #c1ffe1;
+    }
+}
+@media only screen and (min-width: 481px) {
+    .container-fluid {
+      background: #c1ffe1;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .container-fluid {
+      background: #c1ffe1;
+    }
+}
+
+body {
+  overflow: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.buttons {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+#bass_img {
+  width: 60%;
+  box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.6);
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+#beat_img {
+  width: 90%;
+  display: inline-block;
+  box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.6);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  margin-top: 47.5%;
+}
+
+.bottom {
+  text-align: left;
+}
+
+#keyboard_img {
+  width: 90%;
+  box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.6);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  margin-top: 44%;
+}
+
+#horns_img {
+  width: 90%;
+  box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.6);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  margin-top: 56%;
+}

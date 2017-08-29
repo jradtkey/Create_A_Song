@@ -1,0 +1,528 @@
+<!--
+Create arrays with audio files orgnaized by:
+kickdrum, high-hat, snare, bass
+
+generate random number for each array
+
+the index that was selected will play the audio file
+and we should hear all instruments at once
+
+or we can add the instruments in one at a time and expirement
+
+add feature that allows user to stop music while mouse is held down
+90 bpm E major
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Beat Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@v3.1.0/dist/amplitude.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+
+          var beatMe1 = document.getElementById('beat1');
+          var beatMe2 = document.getElementById('beat2');
+          var beatMe3 = document.getElementById('beat3');
+          var beatMe4 = document.getElementById('beat4');
+          var beatMe5 = document.getElementById('beat5');
+          var bassMe1 = document.getElementById('bass1');
+          var bassMe2 = document.getElementById('bass2');
+          var bassMe3 = document.getElementById('bass3');
+          var bassMe4 = document.getElementById('bass4');
+          var bassMe5 = document.getElementById('bass5');
+          var keyMe1 = document.getElementById('key1');
+          var keyMe2 = document.getElementById('key2');
+          var keyMe3 = document.getElementById('key3');
+          var keyMe4 = document.getElementById('key4');
+          var keyMe5 = document.getElementById('key5');
+
+          beatMe1.play();
+          beatMe2.play();
+          beatMe3.play();
+          beatMe4.play();
+          beatMe5.play();
+
+          bassMe1.play();
+          bassMe2.play();
+          bassMe3.play();
+          bassMe4.play();
+          bassMe5.play();
+
+          keyMe1.play();
+          keyMe2.play();
+          keyMe3.play();
+          keyMe4.play();
+          keyMe5.play();
+
+          document.getElementById('beat1').muted = true;
+          document.getElementById('beat2').muted = true;
+          document.getElementById('beat3').muted = true;
+          document.getElementById('beat4').muted = true;
+          document.getElementById('beat5').muted = true;
+
+          document.getElementById('bass1').muted = true;
+          document.getElementById('bass2').muted = true;
+          document.getElementById('bass3').muted = true;
+          document.getElementById('bass4').muted = true;
+          document.getElementById('bass5').muted = true;
+
+          document.getElementById('key1').muted = true;
+          document.getElementById('key2').muted = true;
+          document.getElementById('key3').muted = true;
+          document.getElementById('key4').muted = true;
+          document.getElementById('key5').muted = true;
+
+        $('#create_beat').click(function()  {
+
+           var rand0 = Math.floor(Math.random()*5);
+           var rand1 = Math.floor(Math.random()*5);
+           var rand2 = Math.floor(Math.random()*5);
+           var rand3 = Math.floor(Math.random()*5);
+
+           if (rand0 === 4) {
+             beatMe1.play();
+             toggle_drums1();
+            $('#drum').html("1")
+           } else if (rand0 === 3) {
+             beatMe2.play();
+             toggle_drums2();
+             $('#drum').html("2")
+           } if (rand0 === 2) {
+             beatMe3.play();
+             toggle_drums3();
+             $('#drum').html("3")
+           } else if (rand0 === 1) {
+             beatMe4.play();
+             toggle_drums4();
+             $('#drum').html("4")
+           } else if (rand0 === 0) {
+             beatMe5.play();
+             toggle_drums5();
+             $('#drum').html("5")
+           }
+
+           if (rand1 === 4) {
+             toggle_bass1();
+             $('#bass').html("1")
+           } else if (rand1 === 3) {
+             toggle_bass2();
+             $('#bass').html("2")
+           } if (rand1 === 2) {
+             toggle_bass3();
+             $('#bass').html("3")
+           } else if (rand1 === 1) {
+             toggle_bass4();
+             $('#bass').html("4")
+           } else if (rand1 === 0) {
+             toggle_bass5();
+             $('#bass').html("5")
+           }
+
+           if (rand2 === 4) {
+             toggle_key1();
+             $('#key').html("1")
+           } else if (rand2 === 3) {
+             toggle_key2();
+             $('#key').html("2")
+           } if (rand2 === 2) {
+             toggle_key3();
+             $('#key').html("3")
+           } else if (rand2 === 1) {
+             toggle_key4();
+             $('#key').html("4")
+           } else if (rand2 === 0) {
+             toggle_key5();
+             $('#key').html("5")
+           }
+
+          var audio = document.getElementById('beat1');
+          var audio = document.getElementById('beat2');
+          var audio = document.getElementById('beat3');
+          var audio = document.getElementById('beat4');
+          var audio = document.getElementById('beat5');
+
+          function toggle_drums1() {
+            $('#mute_beat').click(function () {
+              document.getElementById('beat1').muted = true;
+            });
+            $('#play_beat').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('beat1').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('beat1').muted = false;
+              }
+            });
+          }
+
+          function toggle_drums2() {
+            $('#mute_beat').click(function () {
+              document.getElementById('beat2').muted = true;
+            });
+            $('#play_beat').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('beat2').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('beat2').muted = false;
+              }
+            });
+          }
+
+          function toggle_drums3() {
+            $('#mute_beat').click(function () {
+              document.getElementById('beat3').muted = true;
+            });
+            $('#play_beat').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('beat3').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('beat3').muted = false;
+              }
+            });
+          }
+
+          function toggle_drums4() {
+            $('#mute_beat').click(function () {
+              document.getElementById('beat4').muted = true;
+            });
+            $('#play_beat').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('beat4').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('beat4').muted = false;
+              }
+            });
+          }
+
+          function toggle_drums5() {
+            $('#mute_beat').click(function () {
+              document.getElementById('beat5').muted = true;
+            });
+            $('#play_beat').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('beat5').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('beat5').muted = false;
+              }
+            });
+          }
+
+          function toggle_bass1() {
+            $('#mute_bass').click(function () {
+              document.getElementById('bass1').muted = true;
+            });
+            $('#play_bass').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('bass1').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('bass1').muted = false;
+              }
+            });
+          }
+
+          function toggle_bass2() {
+            $('#mute_bass').click(function () {
+              document.getElementById('bass2').muted = true;
+            });
+            $('#play_bass').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('bass2').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('bass2').muted = false;
+              }
+            });
+          }
+
+          function toggle_bass3() {
+            $('#mute_bass').click(function () {
+              document.getElementById('bass3').muted = true;
+            });
+            $('#play_bass').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('bass3').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('bass3').muted = false;
+              }
+            });
+          }
+
+          function toggle_bass4() {
+            $('#mute_bass').click(function () {
+              document.getElementById('bass4').muted = true;
+            });
+            $('#play_bass').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('bass4').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('bass4').muted = false;
+              }
+            });
+          }
+
+          function toggle_bass5() {
+            $('#mute_bass').click(function () {
+              document.getElementById('bass5').muted = true;
+            });
+            $('#play_bass').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('bass5').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('bass5').muted = false;
+              }
+            });
+          }
+
+          function toggle_key1() {
+            $('#mute_keyboard').click(function () {
+              document.getElementById('key1').muted = true;
+            });
+            $('#play_keyboard').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('key1').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('key1').muted = false;
+              }
+            });
+          }
+
+          function toggle_key2() {
+            $('#mute_keyboard').click(function () {
+              document.getElementById('key2').muted = true;
+            });
+            $('#play_keyboard').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('key2').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('key2').muted = false;
+              }
+            });
+          }
+
+          function toggle_key3() {
+            $('#mute_keyboard').click(function () {
+              document.getElementById('key3').muted = true;
+            });
+            $('#play_keyboard').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('key3').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('key3').muted = false;
+              }
+            });
+          }
+
+          function toggle_key4() {
+            $('#mute_keyboard').click(function () {
+              document.getElementById('key4').muted = true;
+            });
+            $('#play_keyboard').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('key4').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('key4').muted = false;
+              }
+            });
+          }
+
+          function toggle_key5() {
+            $('#mute_keyboard').click(function () {
+              document.getElementById('key5').muted = true;
+            });
+            $('#play_keyboard').click(function () {
+              if (audio.mute == false) {
+                document.getElementById('key5').muted = true;
+              } else {
+                audio.mute = true;
+                document.getElementById('key5').muted = false;
+              }
+            });
+          }
+
+          $('#next_bass').click(function () {
+            if (document.getElementById('bass1').muted == false) {
+              document.getElementById('bass1').muted = true;
+              document.getElementById('bass2').muted = false;
+              $('#bass').html('2');
+            } else if (document.getElementById('bass2').muted == false) {
+              document.getElementById('bass2').muted = true;
+              document.getElementById('bass3').muted = false;
+              $('#bass').html('3');
+            } else if (document.getElementById('bass3').muted == false) {
+              document.getElementById('bass3').muted = true;
+              document.getElementById('bass4').muted = false;
+              $('#bass').html('4');
+            } else if (document.getElementById('bass4').muted == false) {
+              document.getElementById('bass4').muted = true;
+              document.getElementById('bass5').muted = false;
+              $('#bass').html('5');
+            } else if (document.getElementById('bass5').muted == false) {
+              document.getElementById('bass5').muted = true;
+              document.getElementById('bass1').muted = false;
+              $('#bass').html('1');
+            }
+          })
+
+          $('#next_drums').click(function () {
+            if (document.getElementById('beat1').muted == false) {
+              document.getElementById('beat1').muted = true;
+              document.getElementById('beat2').muted = false;
+              $('#drum').html('2');
+            } else if (document.getElementById('beat2').muted == false) {
+              document.getElementById('beat2').muted = true;
+              document.getElementById('beat3').muted = false;
+              $('#drum').html('3');
+            } else if (document.getElementById('beat3').muted == false) {
+              document.getElementById('beat3').muted = true;
+              document.getElementById('beat4').muted = false;
+              $('#drum').html('4');
+            } else if (document.getElementById('beat4').muted == false) {
+              document.getElementById('beat4').muted = true;
+              document.getElementById('beat5').muted = false;
+              $('#drum').html('5');
+            } else if (document.getElementById('beat5').muted == false) {
+              document.getElementById('beat5').muted = true;
+              document.getElementById('beat1').muted = false;
+              $('#drum').html('1');
+            }
+          })
+
+          $('#next_keyboard').click(function () {
+            if (document.getElementById('key1').muted == false) {
+              document.getElementById('key1').muted = true;
+              document.getElementById('key2').muted = false;
+              $('#key').html('2');
+            } else if (document.getElementById('key2').muted == false) {
+              document.getElementById('key2').muted = true;
+              document.getElementById('key3').muted = false;
+              $('#key').html('3');
+            } else if (document.getElementById('key3').muted == false) {
+              document.getElementById('key3').muted = true;
+              document.getElementById('key4').muted = false;
+              $('#key').html('4');
+            } else if (document.getElementById('key4').muted == false) {
+              document.getElementById('key4').muted = true;
+              document.getElementById('key5').muted = false;
+              $('#key').html('5');
+            } else if (document.getElementById('key5').muted == false) {
+              document.getElementById('key5').muted = true;
+              document.getElementById('key1').muted = false;
+              $('#key').html('1');
+            }
+          })
+
+
+        });
+
+
+      $('#create_beat').click(function () {
+        $('#play_bass').click();
+        $('#play_beat').click();
+        $('#play_keyboard').click();
+      })
+
+      $('#refresh').click(function () {
+        location.reload();
+      })
+
+
+
+      })
+    </script>
+  </head>
+  <body>
+
+    <audio id='beat1' src="Drums/drum1.m4a" loop></audio>
+    <audio id='beat2' src="Drums/drum2.m4a" loop></audio>
+    <audio id='beat3' src="Drums/drum3.m4a" loop></audio>
+    <audio id='beat4' src="Drums/drum4.m4a" loop></audio>
+    <audio id='beat5' src="Drums/drum5.m4a" loop></audio>
+
+    <audio id='bass1' src="Bass/bass1.m4a" loop></audio>
+    <audio id='bass2' src="Bass/bass2.m4a" loop></audio>
+    <audio id='bass3' src="Bass/bass3.m4a" loop></audio>
+    <audio id='bass4' src="Bass/bass4.m4a" loop></audio>
+    <audio id='bass5' src="Bass/bass5.m4a" loop></audio>
+
+    <audio id='key1' src="Keyboard/keyboard1.m4a" loop></audio>
+    <audio id='key2' src="Keyboard/keyboard2.m4a" loop></audio>
+    <audio id='key3' src="Keyboard/keyboard3.m4a" loop></audio>
+    <audio id='key4' src="Keyboard/keyboard4.m4a" loop></audio>
+    <audio id='key5' src="Keyboard/keyboard5.m4a" loop></audio>
+
+    <header>
+      <h1>Create A Beat</h1>
+    <!--  <ol>
+        <li>Click the button.</li>
+        <li>Click the button again.</li>
+        <li>Keep clicking till you like one.</li>
+        <li>Enjoy...</li>
+      </ol>
+    -->
+    </header>
+
+    <main>
+
+      <div class="bass_position">
+        <img src="Images/bass_.png" id="bass_img">
+        <button id="play_bass" type="button">Play Bass</button>
+        <button id="next_bass" type="button">New Bass</button>
+        <button id="mute_bass" type="button">Pause Bass</button>
+        <div class="bottom">
+          <h3>Bass track: </h3>
+          <h4 id="bass"></h4>
+        </div>
+      </div>
+
+      <div class="drums_position">
+        <img src="Images/drums.png" id="beat_img">
+        <button id="play_beat" type="button">Play Drums</button>
+        <button id="next_drums" type="button">New Drums</button>
+        <button id="mute_beat" type="button">Pause Drums</button>
+        <div class="bottom">
+          <h3>Drum track: </h3>
+          <h4 id="drum"></h4>
+        </div>
+      </div>
+
+      <div class="keyboard_position">
+        <img src="Images/keyboard.png" id="keyboard_img">
+        <button id="play_keyboard" type="button">Play Keyboard</button>
+        <button id="next_keyboard" type="button">New Keyboard</button>
+        <button id="mute_keyboard" type="button">Pause Keyboard</button>
+        <div class="bottom">
+          <h3>Keyboard track: </h3>
+          <h4 id="key"></h4>
+        </div>
+      </div>
+
+    </main>
+
+    <button id="create_beat" type="button">Create A Beat</button>
+    <button id="refresh" type="button">Refresh</button>
+
+
+
+
+
+  </body>
+</html>
