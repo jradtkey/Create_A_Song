@@ -1,16 +1,22 @@
 @media only screen and (max-width: 480px) {
     .container-fluid {
-      background: #c1ffe1;
+      background-image:
+    linear-gradient(
+      red, #f06d06
+    );
     }
 }
 @media only screen and (min-width: 481px) {
     .container-fluid {
-      background: #c1ffe1;
+      background-image:
+    linear-gradient(
+      red, #f06d06
+    );
     }
 }
 @media only screen and (min-width: 1024px) {
     .container-fluid {
-      background: #c1ffe1;
+      background-image: linear-gradient(red, #f06d06);
     }
 }
 
@@ -18,7 +24,9 @@ body {
   overflow: auto;
 }
 
-h1 {
+header {
+  padding-top: 30px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -31,6 +39,7 @@ h1 {
 #bass_img {
   width: 60%;
   box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.6);
+  background-image: linear-gradient(#f06d06, red);
   margin-bottom: 15px;
   border-radius: 10px;
 }
@@ -39,6 +48,7 @@ h1 {
   width: 90%;
   display: inline-block;
   box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.6);
+  background-image: linear-gradient(#f06d06, red);
   margin-bottom: 15px;
   border-radius: 10px;
   margin-top: 47.5%;
@@ -51,6 +61,7 @@ h1 {
 #keyboard_img {
   width: 90%;
   box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.6);
+  background-image: linear-gradient(#f06d06, red);
   margin-bottom: 15px;
   border-radius: 10px;
   margin-top: 44%;
@@ -59,7 +70,33 @@ h1 {
 #horns_img {
   width: 90%;
   box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.6);
+  background-image: linear-gradient(#f06d06, red);
   margin-bottom: 15px;
   border-radius: 10px;
   margin-top: 56%;
+}
+
+#create_beat {
+  background-color: #09bc00;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  width: 20%;
+  font-size: 2em;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+}
+
+#refresh {
+  background-color: #09bc00;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  width: 20%;
+  font-size: 2rem;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+}
+
+#footer {
+  padding-bottom: 100px;
+  margin-top: 15px;
 }

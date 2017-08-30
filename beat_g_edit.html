@@ -401,6 +401,35 @@ Winner will be turned into a song
             }
           })
 
+          $('#previous_drums').click(function () {
+            if (document.getElementById('beat1').muted == false) {
+              document.getElementById('beat1').muted = true;
+              document.getElementById('beat5').muted = false;
+              toggle_drums5();
+              $('#drum').html('5');
+            } else if (document.getElementById('beat2').muted == false) {
+              document.getElementById('beat2').muted = true;
+              document.getElementById('beat1').muted = false;
+              toggle_drums1();
+              $('#drum').html('1');
+            } else if (document.getElementById('beat3').muted == false) {
+              document.getElementById('beat3').muted = true;
+              document.getElementById('beat2').muted = false;
+              toggle_drums2();
+              $('#drum').html('2');
+            } else if (document.getElementById('beat4').muted == false) {
+              document.getElementById('beat4').muted = true;
+              document.getElementById('beat3').muted = false;
+              toggle_drums3();
+              $('#drum').html('3');
+            } else if (document.getElementById('beat5').muted == false) {
+              document.getElementById('beat5').muted = true;
+              document.getElementById('beat4').muted = false;
+              toggle_drums4();
+              $('#drum').html('4');
+            }
+          })
+
           $('#next_drums').click(function () {
             if (document.getElementById('beat1').muted == false) {
               document.getElementById('beat1').muted = true;
@@ -456,6 +485,35 @@ Winner will be turned into a song
               document.getElementById('key1').muted = false;
               toggle_key1();
               $('#key').html('1');
+            }
+          })
+
+          $('#previous_keyboard').click(function () {
+            if (document.getElementById('key1').muted == false) {
+              document.getElementById('key1').muted = true;
+              document.getElementById('key5').muted = false;
+              toggle_key5();
+              $('#key').html('5');
+            } else if (document.getElementById('key2').muted == false) {
+              document.getElementById('key2').muted = true;
+              document.getElementById('key1').muted = false;
+              toggle_key1();
+              $('#key').html('1');
+            } else if (document.getElementById('key3').muted == false) {
+              document.getElementById('key3').muted = true;
+              document.getElementById('key2').muted = false;
+              toggle_key2();
+              $('#key').html('2');
+            } else if (document.getElementById('key4').muted == false) {
+              document.getElementById('key4').muted = true;
+              document.getElementById('key3').muted = false;
+              toggle_key3();
+              $('#key').html('3');
+            } else if (document.getElementById('key5').muted == false) {
+              document.getElementById('key5').muted = true;
+              document.getElementById('key4').muted = false;
+              toggle_key4();
+              $('#key').html('4');
             }
           })
 
@@ -520,9 +578,10 @@ Winner will be turned into a song
           <img src="Images/bass_.png" id="bass_img">
           <div class="row">
             <div class="buttons">
-              <button id="play_bass" type="button" class="btn btn-sm">Play |></button>
-              <button id="mute_bass" type="button" class="btn btn-sm">Pause ||</button>
-              <button id="next_bass" type="button" class="btn btn-sm">Next >|</button>
+              <button id="previous_bass" type="button" class="btn btn-sm">|<</button>
+              <button id="play_bass" type="button" class="btn btn-sm">Play</button>
+              <button id="mute_bass" type="button" class="btn btn-sm">Pause</button>
+              <button id="next_bass" type="button" class="btn btn-sm"> >|</button>
             </div>
           </div>
           <div class="bottom">
@@ -539,9 +598,10 @@ Winner will be turned into a song
           <img src="Images/drums.png" id="beat_img">
           <div class="row">
             <div class="buttons">
-              <button id="play_beat" type="button" class="btn btn-sm">Play |></button>
-              <button id="next_drums" type="button" class="btn btn-sm">Next >|</button>
-              <button id="mute_beat" type="button" class="btn btn-sm">Pause ||</button>
+              <button id="previous_drums" type="button" class="btn btn-sm">|<</button>
+              <button id="play_beat" type="button" class="btn btn-sm">Play</button>
+              <button id="mute_beat" type="button" class="btn btn-sm">Pause</button>
+              <button id="next_drums" type="button" class="btn btn-sm">>|</button>
             </div>
           </div>
           <div class="bottom">
@@ -557,9 +617,10 @@ Winner will be turned into a song
           <img src="Images/keyboard.png" id="keyboard_img">
           <div class="row">
             <div class="buttons">
-              <button id="play_keyboard" type="button" class="btn btn-sm">Play |></button>
-              <button id="mute_keyboard" type="button" class="btn btn-sm">Pause ||</button>
-              <button id="next_keyboard" type="button" class="btn btn-sm">Next >|</button>
+              <button id="previous_keyboard" type="button" class="btn btn-sm">|<</button>
+              <button id="play_keyboard" type="button" class="btn btn-sm">Play</button>
+              <button id="mute_keyboard" type="button" class="btn btn-sm">Pause</button>
+              <button id="next_keyboard" type="button" class="btn btn-sm">>|</button>
             </div>
           </div>
           <div class="bottom">
@@ -575,9 +636,10 @@ Winner will be turned into a song
           <img src="Images/horns.png" id="horns_img">
             <div class="row">
               <div class="buttons">
-                <button id="play_horns" type="button" class="btn btn-sm">Play |></button>
-                <button id="play_horns" type="button" class="btn btn-sm">Pause ||</button>
-                <button id="play_horns" type="button" class="btn btn-sm">Next >|</button>
+                <button id="previous_keyboard" type="button" class="btn btn-sm">|<</button>
+                <button id="play_keyboard" type="button" class="btn btn-sm">Play</button>
+                <button id="mute_keyboard" type="button" class="btn btn-sm">Pause</button>
+                <button id="next_keyboard" type="button" class="btn btn-sm">>|</button>
               </div>
             </div>
           <div class="bottom">
@@ -588,13 +650,20 @@ Winner will be turned into a song
       </div>
 
 
-
     </div>
+
     <div class="row">
-
-      <button id="create_beat" type="button">Create A Beat</button>
-      <button id="refresh" type="button">Refresh</button>
+      <div class="col-lg-12 col-md-12 mb-12 text-center">
+        <button id="create_beat" type="button" class="btn-primary">Create A Beat</button>
+      </div>
     </div>
+    <div class="row" id="footer">
+      <div class="col-lg-12 col-md-12 mb-12 text-center">
+        <button id="refresh" type="button" class="btn-primary">Refresh</button>
+      </div>
+    </div>
+
+
 
 
 
