@@ -34,6 +34,10 @@ $(document).ready(function () {
       var keyMei = document.getElementById('key'+i);
       keyMei.play();
     }
+    for (var i = 1; i < 6; i++) {
+      var miscMei = document.getElementById('misc'+i);
+      miscMei.play();
+    }
 /* start playing all tracks
 
     beatMe1.play();
@@ -61,6 +65,9 @@ $(document).ready(function () {
     }
     for (var i = 1; i < 6; i++) {
       document.getElementById('key'+i).muted = true;
+    }
+    for (var i = 1; i < 6; i++) {
+      document.getElementById('misc'+i).muted = true;
     }
 /* mute all tracks
 
@@ -140,6 +147,23 @@ $(document).ready(function () {
        $('#key').html("5")
      }
 
+     if (rand3 === 4) {
+       toggle_misc1();
+       $('#misc').html("1")
+     } else if (rand3 === 3) {
+       toggle_misc2();
+       $('#misc').html("2")
+     } if (rand3 === 2) {
+       toggle_misc3();
+       $('#misc').html("3")
+     } else if (rand3 === 1) {
+       toggle_misc4();
+       $('#misc').html("4")
+     } else if (rand3 === 0) {
+       toggle_misc5();
+       $('#misc').html("5")
+     }
+
     var audio_beat1 = document.getElementById('beat1');
     var audio_beat2 = document.getElementById('beat2');
     var audio_beat3 = document.getElementById('beat3');
@@ -155,6 +179,11 @@ $(document).ready(function () {
     var audio_key3 = document.getElementById('key3');
     var audio_key4 = document.getElementById('key4');
     var audio_key5 = document.getElementById('key5');
+    var audio_misc1 = document.getElementById('misc1');
+    var audio_misc2 = document.getElementById('misc2');
+    var audio_misc3 = document.getElementById('misc3');
+    var audio_misc4 = document.getElementById('misc4');
+    var audio_misc5 = document.getElementById('misc5');
 
 
 
@@ -370,6 +399,76 @@ $(document).ready(function () {
       });
     }
 
+    function toggle_misc1() {
+      $('#mute_misc').click(function () {
+        document.getElementById('misc1').muted = true;
+      });
+      $('#play_misc').click(function () {
+        if (audio_misc1.mute == false) {
+          document.getElementById('misc1').muted = true;
+        } else {
+          audio_misc1.mute = true;
+          document.getElementById('misc1').muted = false;
+        }
+      });
+    }
+
+    function toggle_misc2() {
+      $('#mute_misc').click(function () {
+        document.getElementById('misc2').muted = true;
+      });
+      $('#play_misc').click(function () {
+        if (audio_misc2.mute == false) {
+          document.getElementById('misc2').muted = true;
+        } else {
+          audio_misc2.mute = true;
+          document.getElementById('misc2').muted = false;
+        }
+      });
+    }
+
+    function toggle_misc3() {
+      $('#mute_misc').click(function () {
+        document.getElementById('misc3').muted = true;
+      });
+      $('#play_misc').click(function () {
+        if (audio_misc3.mute == false) {
+          document.getElementById('misc3').muted = true;
+        } else {
+          audio_misc3.mute = true;
+          document.getElementById('misc3').muted = false;
+        }
+      });
+    }
+
+    function toggle_misc4() {
+      $('#mute_misc').click(function () {
+        document.getElementById('misc4').muted = true;
+      });
+      $('#play_misc').click(function () {
+        if (audio_misc4.mute == false) {
+          document.getElementById('misc4').muted = true;
+        } else {
+          audio_misc4.mute = true;
+          document.getElementById('misc4').muted = false;
+        }
+      });
+    }
+
+    function toggle_misc5() {
+      $('#mute_misc').click(function () {
+        document.getElementById('misc5').muted = true;
+      });
+      $('#play_misc').click(function () {
+        if (audio_misc5.mute == false) {
+          document.getElementById('misc5').muted = true;
+        } else {
+          audio_misc5.mute = true;
+          document.getElementById('misc5').muted = false;
+        }
+      });
+    }
+
     $('#previous_bass').click(function () {
       if (document.getElementById('bass1').muted == false) {
         document.getElementById('bass1').muted = true;
@@ -544,6 +643,64 @@ $(document).ready(function () {
       }
     })
 
+    $('#next_misc').click(function () {
+      if (document.getElementById('misc1').muted == false) {
+        document.getElementById('misc1').muted = true;
+        document.getElementById('misc2').muted = false;
+        toggle_misc2();
+        $('#misc').html('2');
+      } else if (document.getElementById('misc2').muted == false) {
+        document.getElementById('misc2').muted = true;
+        document.getElementById('misc3').muted = false;
+        toggle_misc3();
+        $('#misc').html('3');
+      } else if (document.getElementById('misc3').muted == false) {
+        document.getElementById('misc3').muted = true;
+        document.getElementById('misc4').muted = false;
+        toggle_misc4();
+        $('#misc').html('4');
+      } else if (document.getElementById('misc4').muted == false) {
+        document.getElementById('misc4').muted = true;
+        document.getElementById('misc5').muted = false;
+        toggle_misc5();
+        $('#misc').html('5');
+      } else if (document.getElementById('misc5').muted == false) {
+        document.getElementById('misc5').muted = true;
+        document.getElementById('misc1').muted = false;
+        toggle_misc1();
+        $('#key').html('1');
+      }
+    })
+
+    $('#previous_misc').click(function () {
+      if (document.getElementById('misc1').muted == false) {
+        document.getElementById('misc1').muted = true;
+        document.getElementById('misc5').muted = false;
+        toggle_misc5();
+        $('#misc').html('5');
+      } else if (document.getElementById('misc2').muted == false) {
+        document.getElementById('misc2').muted = true;
+        document.getElementById('misc1').muted = false;
+        toggle_misc1();
+        $('#misc').html('1');
+      } else if (document.getElementById('misc3').muted == false) {
+        document.getElementById('misc3').muted = true;
+        document.getElementById('misc2').muted = false;
+        toggle_misc2();
+        $('#misc').html('2');
+      } else if (document.getElementById('misc4').muted == false) {
+        document.getElementById('misc4').muted = true;
+        document.getElementById('misc3').muted = false;
+        toggle_misc3();
+        $('#misc').html('3');
+      } else if (document.getElementById('misc5').muted == false) {
+        document.getElementById('misc5').muted = true;
+        document.getElementById('misc4').muted = false;
+        toggle_misc4();
+        $('#misc').html('4');
+      }
+    })
+
 
   });
 
@@ -595,19 +752,19 @@ $(document).ready(function () {
     }
   });
 
-  $( "#horns_slider" ).slider({
+  $( "#misc_slider" ).slider({
     value  : 75,
     step   : 1,
     range  : 'min',
     min    : 0,
     max    : 100,
     change : function(){
-        var value = $("#bass_slider").slider("value");
-        document.getElementById("bass1").volume = (value / 100);
-        document.getElementById("bass2").volume = (value / 100);
-        document.getElementById("bass3").volume = (value / 100);
-        document.getElementById("bass4").volume = (value / 100);
-        document.getElementById("bass5").volume = (value / 100);
+        var value = $("#misc_slider").slider("value");
+        document.getElementById("misc1").volume = (value / 100);
+        document.getElementById("misc2").volume = (value / 100);
+        document.getElementById("misc3").volume = (value / 100);
+        document.getElementById("misc4").volume = (value / 100);
+        document.getElementById("misc5").volume = (value / 100);
     }
   });
 
@@ -616,11 +773,12 @@ $('#create_beat').click(function () {
   $('#play_bass').click();
   $('#play_beat').click();
   $('#play_keyboard').click();
-})
+  $('#play_misc').click();
+});
 
 $('#refresh').click(function () {
   location.reload();
-})
+});
 
 
 
