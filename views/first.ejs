@@ -4,7 +4,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" href="first.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- jQuery/jQueryUI (hosted) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js"></script>
+    <!-- Optional: Reflection -->
+		<script type="SwipeFlow/text/javascript" src="reflection.js"></script>
+
+		<!-- interpolate, depends on jQ 1.8.0+ -->
+		<script src="SwipeFlow/jquery.interpolate.min.js"></script>
+
+		<!-- Coverflow -->
+		<script src="SwipeFlow/jquery.coverflow.js"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -12,26 +23,83 @@
     <h1 class="text-center" style="font-size: 7vw">Choose your bass track</h1>
     <div style="background-image: url('images/bass.jpg'); background-size:cover; height: 600px">
       <form action="/second" method="post">
-        <button type="submit" name="guitar" value="guitar1"></button>
-        <button type="submit" name="guitar" value="guitar2"></button>
-        <button type="submit" name="guitar" value="guitar3"></button>
-        <button type="submit" name="guitar" value="guitar4"></button>
+        <div class="coverflow" style="color: white;">
+            <div class="cover"><button style="background-image: url('images/bass1.png'); background-size:cover; margin-top: 30%; width: 300px; height: 300px;" type="submit" name="guitar" value="guitar1"></button></div>
+            <div class="cover"><button style="margin-top: 30%; width: 300px; height: 300px;" type="submit" name="guitar" value="guitar2"></button></div>
+            <div class="cover"><button style="margin-top: 30%; width: 300px; height: 300px;" type="submit" name="guitar" value="guitar3"></button></div>
+            <div class="cover"><button style="margin-top: 30%; width: 300px; height: 300px;" type="submit" name="guitar" value="guitar4"></button></div>
+        </div>
       </form>
-      <button class="btn">BUTTON</button>
-      <div class="coverflow" style="color: white;">
-          <div class="cover">A</div>
-          <div class="cover">B</div>
-          ...
-          <div class="cover">Y</div>
-          <div class="cover">Z</div>
-      </div>
     </div>
 
   </body>
   <script>
-    $(document).ready(function () {
-      $('.coverflow').coverflow();
+  $(function() {
 
-    })
+    // Alphabet
+
+    $('.coverflow').coverflow();
+
+    $('#first').click(function() {
+      $('.coverflow').coverflow('index', 0);
+    });
+
+    $('#last').click(function() {
+      $('.coverflow').coverflow('index', -1);
+    });
+
+    $('#goto6').click(function() {
+      $('.coverflow').coverflow('index', 6-1);	// zero-based index!
+    });
+
+    $('#keyboard').click(function() {
+      $('.coverflow').coverflow('option', 'enableKeyboard', $(this).is(':checked'));
+    });
+
+    $('#wheel').click(function() {
+      $('.coverflow').coverflow('option', 'enableWheel', $(this).is(':checked'));
+    });
+
+    $('#click').click(function() {
+      $('.coverflow').coverflow('option', 'enableClick', $(this).is(':checked'));
+    });
+
+    /* CD covers */
+
+    if ($.fn.reflect) {
+      $('.photos .cover').reflect();
+    }
+
+    $('.photos').coverflow({
+      easing:			'easeOutElastic',
+      duration:		1000,
+      index:			3,
+      width:			320,
+      height:			240,
+      visible:		'density',
+      selectedCss:	{	opacity: 1	},
+      outerCss:		{	opacity: .1	},
+
+      confirm:		function() {
+        console.log('Confirm');
+      },
+
+      before:			function() {
+        $('#photos-name').stop(true).fadeOut('fast');
+      },
+
+      select:			function(event, cover) {
+        var img = $(cover).children().andSelf().filter('img').last();
+        $('#photos-name').text(img.data('name') || 'unknown').stop(true).fadeIn('fast');
+      },
+    });
+
+    $('#leakdetect').click(function() {
+      $('#leakbucket').empty();
+      for (var i = 0; i < 100; ++i) {
+        $('<div><div>test</div></div>').appendTo('#leakbucket').coverflow();
+      }
+    });
+  });
   </script>
 </html>
