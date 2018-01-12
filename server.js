@@ -25,7 +25,7 @@ app.get('/first', function(req, res) {
 })
 
 app.post('/second', function(req, res) {
-  req.session.band = [req.body.guitar]
+  req.session.band = [req.body.bass]
   res.render('second', req.body)
 })
 
@@ -35,13 +35,14 @@ app.post('/third', function(req, res) {
 })
 
 app.post('/fourth', function(req, res) {
-  req.session.band.push(req.body.bass)
+  req.session.band.push(req.body.guitar)
   res.render('fourth', req.body)
 })
 
 app.post('/final', function(req, res) {
   req.session.band.push(req.body.piano)
   var band = req.session.band
+  console.log(band);
   res.render('final', {band: band})
   // res.write('<h1>'+band+'</h1>')
 
