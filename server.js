@@ -21,41 +21,30 @@ app.get('/', function(req, res) {
 })
 
 app.get('/first', function(req, res) {
-  console.log("at 1");
   res.render('first')
 })
 
 app.post('/second', function(req, res) {
-  console.log(req.body);
-  console.log("at 2");
   req.session.band = [req.body.guitar]
-  console.log(req.session.band);
   res.render('second', req.body)
 })
 
 app.post('/third', function(req, res) {
-  console.log(req.body);
-  console.log("at 3");
   req.session.band.push(req.body.drums)
-  console.log(req.session.band);
   res.render('third', req.body)
 })
 
 app.post('/fourth', function(req, res) {
-  console.log(req.body);
-  console.log("at 4");
   req.session.band.push(req.body.bass)
-  console.log(req.session.band);
   res.render('fourth', req.body)
 })
 
 app.post('/final', function(req, res) {
-  console.log(req.body);
-  console.log("at final");
   req.session.band.push(req.body.piano)
   var band = req.session.band
-  console.log(req.session.band);
-  res.render('final', req.body)
+  res.render('final', {band: band})
+  // res.write('<h1>'+band+'</h1>')
+
 })
 
 // tell your server which port to run on

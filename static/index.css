@@ -1,0 +1,19 @@
+body {
+  font-family: 'Rubik',sans-serif;
+}
+
+.btn-primary {
+  background: #bfa67a;
+  border-color: #21252a;
+  color: #21252a;
+  margin-left: 20px;
+  width: 240%;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: transparent;
+    color: #bfa67a;
+    border-color: #bfa67a;
+    margin-left: 20px;
+    width: 240%;
+}

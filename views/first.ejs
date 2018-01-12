@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="first.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    Select the first instrument
-    <form action="/second" method="post">
-      <button type="submit" name="guitar" value="guitar1"></button>
-      <button type="submit" name="guitar" value="guitar2"></button>
-      <button type="submit" name="guitar" value="guitar3"></button>
-      <button type="submit" name="guitar" value="guitar4"></button>
-    </form>
+    <h1 class="text-center" style="font-size: 7vw">Choose your bass track</h1>
+    <div style="background-image: url('images/bass.jpg'); background-size:cover; height: 600px">
+      <form action="/second" method="post">
+        <button type="submit" name="guitar" value="guitar1"></button>
+        <button type="submit" name="guitar" value="guitar2"></button>
+        <button type="submit" name="guitar" value="guitar3"></button>
+        <button type="submit" name="guitar" value="guitar4"></button>
+      </form>
+      <button class="btn">BUTTON</button>
+      <div class="coverflow" style="color: white;">
+          <div class="cover">A</div>
+          <div class="cover">B</div>
+          ...
+          <div class="cover">Y</div>
+          <div class="cover">Z</div>
+      </div>
+    </div>
 
   </body>
+  <script>
+    $(document).ready(function () {
+      $('.coverflow').coverflow();
+
+    })
+  </script>
 </html>
