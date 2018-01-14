@@ -114,6 +114,9 @@
 							$( "#fadeIn"+i ).hide( "slow", function() {
 								// Animation complete
 							});
+							$( "#select"+i ).hide( "slow", function() {
+								// Animation complete
+							});
 						}
 					}
 					if (index === that.currentIndex) {
@@ -121,6 +124,9 @@
 					} else {
 						that._setIndex(index, true);
 							$( "#fadeIn"+index ).fadeIn( "slow", function() {
+								// Animation complete
+							});
+							$( "#select"+index ).fadeIn( "slow", function() {
 								// Animation complete
 							});
 					}
@@ -192,8 +198,14 @@
 							$( "#fadeIn"+that.options.index).hide( "slow", function() {
 								// Animation complete
 							});
+							$( "#select"+that.options.index).hide( "slow", function() {
+								// Animation complete
+							});
 							that._setIndex(that.options.index + 1, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {
+								// Animation complete
+							});
+							$( "#select"+that.options.index).fadeIn( "slow", function() {
 								// Animation complete
 							});
 							break;
@@ -203,8 +215,14 @@
 							$( "#fadeIn"+that.options.index).hide( "slow", function() {
 								// Animation complete
 							});
+							$( "#select"+that.options.index).hide( "slow", function() {
+								// Animation complete
+							});
 							that._setIndex(that.options.index - that.pagesize, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {
+								// Animation complete
+							});
+							$( "#select"+that.options.index).fadeIn( "slow", function() {
 								// Animation complete
 							});
 							break;
@@ -214,8 +232,14 @@
 							$( "#fadeIn"+that.options.index).hide( "slow", function() {
 								// Animation complete
 							});
+							$( "#select"+that.options.index).hide( "slow", function() {
+								// Animation complete
+							});
 							that._setIndex(that.options.index + that.pagesize, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {
+								// Animation complete
+							});
+							$( "#select"+that.options.index).fadeIn( "slow", function() {
 								// Animation complete
 							});
 							break;
