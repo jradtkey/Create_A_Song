@@ -20,6 +20,19 @@
     <title></title>
   </head>
   <body>
+
+    <audio id='beat0' src="Drums/drum1.m4a" loop></audio>
+    <audio id='beat1' src="Drums/drum2.m4a" loop></audio>
+    <audio id='beat2' src="Drums/drum3.m4a" loop></audio>
+    <audio id='beat3' src="Drums/drum4.m4a" loop></audio>
+    <audio id='beat4' src="Drums/drum5.m4a" loop></audio>
+
+    <!-- <% for (var x in band) { %> -->
+    <h1 class="<%= band[x] %>"><%= band[x] %></h1>
+    <audio id='bass0' src="<%= band[x] %>"></audio>
+    <hr>
+<!-- <% } %> -->
+
     <h1 class="text-center" style="font-size: 7vw">Choose your drum track</h1>
     <div style="background-image: url('images/drums.jpg'); background-size:cover; height: 900px">
         <div class="coverflow">

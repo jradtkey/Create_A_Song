@@ -117,6 +117,10 @@
 							$( "#select"+i ).hide( "slow", function() {
 								// Animation complete
 							});
+							document.getElementById('bass'+i).pause();
+						}
+						else {
+							document.getElementById('bass'+i).play();
 						}
 					}
 					if (index === that.currentIndex) {

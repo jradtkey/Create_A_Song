@@ -38,3 +38,19 @@ body {
     background-color: Transparent;
     outline: none;
 }
+
+.btn-secondary {
+  background-color: #bfa67a;
+  color: Black;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
+    border-color: #bfa67a;
+    color: #bfa67a;
+    border-radius: 10px;
+    background-color: Transparent;
+    outline: none;
+}

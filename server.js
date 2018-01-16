@@ -26,7 +26,9 @@ app.get('/first', function(req, res) {
 
 app.post('/second', function(req, res) {
   req.session.band = [req.body.bass]
-  res.render('second', req.body)
+  var band = req.session.band
+  console.log(band);
+  res.render('second', {band: req.body})
 })
 
 app.post('/third', function(req, res) {
