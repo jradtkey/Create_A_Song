@@ -117,10 +117,21 @@
 							$( "#select"+i ).hide( "slow", function() {
 								// Animation complete
 							});
-							document.getElementById('bass'+i).pause();
+							if (document.getElementById('bass'+i) != null) {
+								document.getElementById('bass'+i).pause();
+							}
+							if (document.getElementById('beat'+i) != null) {
+								document.getElementById('beat'+i).pause();
+							}
+
 						}
 						else {
-							document.getElementById('bass'+i).play();
+							if (document.getElementById('bass'+i) != null) {
+								document.getElementById('bass'+i).play();
+							}
+							if (document.getElementById('beat'+i) != null) {
+								document.getElementById('beat'+i).play();
+							}
 						}
 					}
 					if (index === that.currentIndex) {
@@ -190,10 +201,30 @@
 							$( "#fadeIn"+that.options.index).hide( "slow", function() {
 								// Animation complete
 							});
+							$( "#select"+that.options.index).hide( "slow", function() {
+								// Animation complete
+							});
+							var i = that.options.index
+							if (document.getElementById('bass'+i) != null) {
+								document.getElementById('bass'+i).pause();
+							}
+							if (document.getElementById('beat'+i) != null) {
+								document.getElementById('beat'+i).pause();
+							}
 							that._setIndex(that.options.index - 1, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {
 								// Animation complete
 							});
+							$( "#select"+that.options.index).fadeIn( "slow", function() {
+								// Animation complete
+							});
+							i = i-1
+							if (document.getElementById('bass'+i) != null) {
+								document.getElementById('bass'+i).play();
+							}
+							if (document.getElementById('beat'+i) != null) {
+								document.getElementById('beat'+i).play();
+							}
 							break;
 
 						case 40:	// down
@@ -205,6 +236,13 @@
 							$( "#select"+that.options.index).hide( "slow", function() {
 								// Animation complete
 							});
+							var i = that.options.index
+							if (document.getElementById('bass'+i) != null) {
+								document.getElementById('bass'+i).pause();
+							}
+							if (document.getElementById('beat'+i) != null) {
+								document.getElementById('beat'+i).pause();
+							}
 							that._setIndex(that.options.index + 1, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {
 								// Animation complete
@@ -212,6 +250,13 @@
 							$( "#select"+that.options.index).fadeIn( "slow", function() {
 								// Animation complete
 							});
+							i = i+1
+							if (document.getElementById('bass'+i) != null) {
+								document.getElementById('bass'+i).play();
+							}
+							if (document.getElementById('beat'+i) != null) {
+								document.getElementById('beat'+i).play();
+							}
 							break;
 
 						case 33:	// page up (towards home)
