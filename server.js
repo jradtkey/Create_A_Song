@@ -37,12 +37,12 @@ app.post('/third', function(req, res) {
 })
 
 app.post('/fourth', function(req, res) {
-  req.session.band.push(req.body.guitar)
+  req.session.band.push(req.body.misc)
   res.render('fourth', req.body)
 })
 
 app.post('/final', function(req, res) {
-  req.session.band.push(req.body.piano)
+  req.session.band.push(req.body.keyboard)
   var band = req.session.band
   console.log(band);
   res.render('final', {band: band})

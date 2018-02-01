@@ -123,7 +123,12 @@
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).pause();
 							}
-
+							if (document.getElementById('misc'+i) != null) {
+								document.getElementById('misc'+i).pause();
+							}
+							if (document.getElementById('key'+i) != null) {
+								document.getElementById('key'+i).pause();
+							}
 						}
 						else {
 							if (document.getElementById('bass'+i) != null) {
@@ -131,6 +136,12 @@
 							}
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).play();
+							}
+							if (document.getElementById('misc'+i) != null) {
+								document.getElementById('misc'+i).play();
+							}
+							if (document.getElementById('key'+i) != null) {
+								document.getElementById('key'+i).play();
 							}
 						}
 					}
@@ -211,6 +222,12 @@
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).pause();
 							}
+							if (document.getElementById('misc'+i) != null) {
+								document.getElementById('misc'+i).pause();
+							}
+							if (document.getElementById('key'+i) != null) {
+								document.getElementById('key'+i).pause();
+							}
 							that._setIndex(that.options.index - 1, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {
 								// Animation complete
@@ -224,6 +241,12 @@
 							}
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).play();
+							}
+							if (document.getElementById('misc'+i) != null) {
+								document.getElementById('misc'+i).play();
+							}
+							if (document.getElementById('key'+i) != null) {
+								document.getElementById('key'+i).play();
 							}
 							break;
 
@@ -243,6 +266,12 @@
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).pause();
 							}
+							if (document.getElementById('misc'+i) != null) {
+								document.getElementById('misc'+i).pause();
+							}
+							if (document.getElementById('key'+i) != null) {
+								document.getElementById('key'+i).pause();
+							}
 							that._setIndex(that.options.index + 1, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {
 								// Animation complete
@@ -256,6 +285,12 @@
 							}
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).play();
+							}
+							if (document.getElementById('misc'+i) != null) {
+								document.getElementById('misc'+i).play();
+							}
+							if (document.getElementById('key'+i) != null) {
+								document.getElementById('key'+i).play();
 							}
 							break;
 
