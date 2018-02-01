@@ -130,20 +130,20 @@
 								document.getElementById('key'+i).pause();
 							}
 						}
-						else {
-							if (document.getElementById('bass'+i) != null) {
-								document.getElementById('bass'+i).play();
-							}
-							if (document.getElementById('beat'+i) != null) {
-								document.getElementById('beat'+i).play();
-							}
-							if (document.getElementById('misc'+i) != null) {
-								document.getElementById('misc'+i).play();
-							}
-							if (document.getElementById('key'+i) != null) {
-								document.getElementById('key'+i).play();
-							}
-						}
+						// else {
+						// 	if (document.getElementById('bass'+i) != null) {
+						// 		document.getElementById('bass'+i).play();
+						// 	}
+						// 	if (document.getElementById('beat'+i) != null) {
+						// 		document.getElementById('beat'+i).play();
+						// 	}
+						// 	if (document.getElementById('misc'+i) != null) {
+						// 		document.getElementById('misc'+i).play();
+						// 	}
+						// 	if (document.getElementById('key'+i) != null) {
+						// 		document.getElementById('key'+i).play();
+						// 	}
+						// }
 					}
 					if (index === that.currentIndex) {
 						that._callback('confirm', event);

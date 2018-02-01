@@ -4,11 +4,19 @@
     <meta charset="utf-8">
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/final.js"></script>
   </head>
   <body>
-    <% for (var x in band) { %>
-    <h1 class="<%= band[x] %>"><%= band[x] %></h1>
+
+    <!-- <% for (var x in band) { %> -->
+    <!-- <% } %> -->
+    <audio id='beat0' src="<%= band[0] %>"></audio>
+    <audio id='beat1' src="<%= band[1] %>"></audio>
+    <audio id='beat2' src="<%= band[2] %>"></audio>
+    <audio id='beat3' src="<%= band[3] %>"></audio>
+
+    <button type="button" id="button">Play</button>
     <hr>
-<% } %>
+
   </body>
 </html>
