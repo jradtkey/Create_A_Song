@@ -119,15 +119,19 @@
 							});
 							if (document.getElementById('bass'+i) != null) {
 								document.getElementById('bass'+i).pause();
+								document.getElementById('bass'+i).currentTime = 0;
 							}
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).pause();
+								document.getElementById('beat'+i).currentTime = 0;
 							}
 							if (document.getElementById('misc'+i) != null) {
 								document.getElementById('misc'+i).pause();
+								document.getElementById('misc'+i).currentTime = 0;
 							}
 							if (document.getElementById('key'+i) != null) {
 								document.getElementById('key'+i).pause();
+								document.getElementById('key'+i).currentTime = 0;
 							}
 						}
 						// else {
@@ -218,15 +222,19 @@
 							var i = that.options.index
 							if (document.getElementById('bass'+i) != null) {
 								document.getElementById('bass'+i).pause();
+								document.getElementById('bass'+i).currentTime = 0;
 							}
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).pause();
+								document.getElementById('beat'+i).currentTime = 0;
 							}
 							if (document.getElementById('misc'+i) != null) {
 								document.getElementById('misc'+i).pause();
+								document.getElementById('misc'+i).currentTime = 0;
 							}
 							if (document.getElementById('key'+i) != null) {
 								document.getElementById('key'+i).pause();
+								document.getElementById('key'+i).currentTime = 0;
 							}
 							that._setIndex(that.options.index - 1, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {
@@ -262,15 +270,19 @@
 							var i = that.options.index
 							if (document.getElementById('bass'+i) != null) {
 								document.getElementById('bass'+i).pause();
+								document.getElementById('bass'+i).currentTime = 0;
 							}
 							if (document.getElementById('beat'+i) != null) {
 								document.getElementById('beat'+i).pause();
+								document.getElementById('beat'+i).currentTime = 0;
 							}
 							if (document.getElementById('misc'+i) != null) {
 								document.getElementById('misc'+i).pause();
+								document.getElementById('misc'+i).currentTime = 0;
 							}
 							if (document.getElementById('key'+i) != null) {
 								document.getElementById('key'+i).pause();
+								document.getElementById('key'+i).currentTime = 0;
 							}
 							that._setIndex(that.options.index + 1, true);
 							$( "#fadeIn"+that.options.index).fadeIn( "slow", function() {

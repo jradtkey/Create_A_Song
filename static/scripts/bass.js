@@ -8,7 +8,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -44,7 +44,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -80,7 +80,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -92,7 +92,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -104,7 +104,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 
@@ -116,7 +116,7 @@ $(document).ready(function() {
       beat.play();
     }
     else {
-      beat.pause()
+      beat.pause();
     }
   })
 

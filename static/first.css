@@ -54,3 +54,7 @@ body {
     background-color: Transparent;
     outline: none;
 }
+
+.fas {
+  font-size: 10em;
+}
