@@ -1,0 +1,72 @@
+body {
+  font-family: 'Rubik',sans-serif;
+}
+
+.btn-primary {
+  background-color: Transparent;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 10%;
+  width: 500px;
+  height: 400px;
+  cursor:pointer;
+  border-color: Transparent;
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    border-color: #bfa67a;
+    border-width: thick;
+    background-color: Transparent;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btn-default {
+  background-color: #bfa67a;
+  cursor:pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    border-color: #bfa67a;
+    color: #bfa67a;
+    border-radius: 10px;
+    background-color: Transparent;
+    outline: none;
+}
+
+.btn-secondary {
+  background-color: #bfa67a;
+  color: Black;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
+    border-color: #bfa67a;
+    color: #bfa67a;
+    border-radius: 10px;
+    background-color: Transparent;
+    outline: none;
+}
+
+.fas {
+  font-size: 10em;
+}
+
+#col {
+  width: 100%;
+}
+
+#misc_slider {
+  margin-top: 5%;
+  width: 100%;
+  display: inline-block;
+  background-color: #f06d06;
+  border: 1px solid #212520;
+}

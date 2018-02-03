@@ -13,6 +13,17 @@ $(document).ready(function() {
 
   })
 
+  $( "#misc_slider" ).slider({
+    value  : 75,
+    step   : 1,
+    range  : 'min',
+    min    : 0,
+    max    : 100,
+    change : function(){
+        var value = $("#misc_slider").slider("value");
+        document.getElementById("beat0").volume = (value / 100);
+    }
+  });
 
 
 })

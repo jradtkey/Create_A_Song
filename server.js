@@ -1,8 +1,5 @@
-// get the http module:
 var http = require('http');
-// fs module allows us to read and write content for responses!!
 var fs = require('fs');
-// get express:
 var express = require('express');
 var session = require('express-session');
 var app = express();
@@ -12,10 +9,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/static"));
 app.use(session({secret: 'thisIsSecret'}));
 
-// This sets the location where express will look for the ejs views
 app.set('views', __dirname + '/views');
-// Now lets set the view engine itself so that express knows that we are using ejs as opposed to another templating engine like jade
 app.set('view engine', 'ejs');
+
 
 app.get('/', function(req, res) {
 })
@@ -44,7 +40,12 @@ app.post('/fourth', function(req, res) {
 app.post('/final', function(req, res) {
   req.session.band.push(req.body.keyboard)
   var band = req.session.band
-  console.log(band);
+  var arr = []
+  for (var i = 0; i < band.length; i++) {
+    arr.push(band[i].split(" "));
+  }
+  console.log(arr);
+  band = arr
   res.render('final', {band: band})
   // res.write('<h1>'+band+'</h1>')
 
