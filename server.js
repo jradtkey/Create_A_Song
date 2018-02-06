@@ -7,14 +7,13 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/static"));
-app.use(session({secret: 'thisIsSecret'}));
+app.use(session({secret: 'thisIsSecret',resave: true, saveUninitialized: true}));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 
 app.get('/', function(req, res) {
-  res.render('static/index')
 })
 
 app.get('/first', function(req, res) {
