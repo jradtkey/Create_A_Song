@@ -61,12 +61,46 @@ body {
 
 #col {
   width: 100%;
+  vertical-align: bottom;
 }
 
-#misc_slider {
-  margin-top: 5%;
-  width: 100%;
-  display: inline-block;
-  background-color: #f06d06;
-  border: 1px solid #212520;
+.panel {
+  margin-left: 10%;
+  text-align:center;
+  line-height:20pt;
+  width: 80%;
 }
+
+.panel:hover {
+  background-color: #bfa67a;
+  border-radius: 10px;
+}
+
+#slider0 {
+  border-width: 2px;
+  border-radius: 20px;
+  border-color: #bfa67a;
+}
+
+#slider1 {
+  border-width: 2px;
+  border-radius: 20px;
+  border-color: #bfa67a;
+}
+
+#slider2 {
+  border-width: 2px;
+  border-radius: 20px;
+  border-color: #bfa67a;
+}
+
+#slider3 {
+  border-width: 2px;
+  border-radius: 20px;
+  border-color: #bfa67a;
+}
+
+/*#bottom {
+  color: blue;
+  vertical-align: bottom;
+}*/

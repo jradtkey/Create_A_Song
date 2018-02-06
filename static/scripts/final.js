@@ -1,11 +1,33 @@
 $(document).ready(function() {
 
+  var size_bass = document.getElementById('bass')
+  var size_drums = document.getElementById('drums')
+  var size_sample = document.getElementById('sample')
+  var size_keyboard = document.getElementById('keyboard')
+  $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
+  $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
+  $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
+
+  $( window ).resize(function() {
+    $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
+    $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
+    $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
+  });
+
+
   $('#button').click(function() {
-    console.log("clicked");
     var beat0 = document.getElementById('beat0');
     var beat1 = document.getElementById('beat1');
     var beat2 = document.getElementById('beat2');
     var beat3 = document.getElementById('beat3');
+    beat0.currentTime = 0;
+    beat1.currentTime = 0;
+    beat2.currentTime = 0;
+    beat3.currentTime = 0;
+    beat0.volume = .5;
+    beat1.volume = .5;
+    beat2.volume = .5;
+    beat3.volume = .5;
     beat0.play();
     beat1.play();
     beat2.play();
@@ -13,16 +35,41 @@ $(document).ready(function() {
 
   })
 
-  $( "#misc_slider" ).slider({
-    value  : 75,
-    step   : 1,
-    range  : 'min',
-    min    : 0,
-    max    : 100,
-    change : function(){
-        var value = $("#misc_slider").slider("value");
-        document.getElementById("beat0").volume = (value / 100);
-    }
+  $("#slider0").slider({
+      value: 50,
+      change: function ( event, ui ) {
+          document.getElementById("beat0").volume = (ui.value/100);
+          $("#volume").html(ui.value)
+        }
+  });
+
+  $("#slider1").slider({
+      value: 50,
+      change: function ( event, ui ) {
+          document.getElementById("beat1").volume = (ui.value/100);
+          $("#volume1").html(ui.value)
+        }
+  });
+
+  $("#slider2").slider({
+      value: 50,
+      change: function ( event, ui ) {
+          document.getElementById("beat2").volume = (ui.value/100);
+          $("#volume2").html(ui.value)
+        }
+  });
+
+  $("#slider3").slider({
+      value: 50,
+      change: function ( event, ui ) {
+          document.getElementById("beat3").volume = (ui.value/100);
+          $("#volume3").html(ui.value)
+        }
+  });
+
+  $('.pull-down').each(function() {
+    var $this = $(this);
+    $this.css('margin-top', $this.parent().height() - $this.height())
   });
 
 
