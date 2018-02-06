@@ -48,7 +48,6 @@ app.post('/final', function(req, res) {
   console.log(arr);
   band = arr
   res.render('final', {band: band})
-  // res.write('<h1>'+band+'</h1>')
 
 })
 
