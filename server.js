@@ -51,6 +51,6 @@ app.post('/final', function(req, res) {
 })
 
 // tell your server which port to run on
-app.listen(8000);
+app.listen(process.env.PORT || 8000);
 // print to terminal window
 console.log("Listening on 8000");
