@@ -1,5 +1,5 @@
 {
-  "name": "Create A Song",
+  "name": "Create_A_Song",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -7,7 +7,7 @@
     "express": "^4.16.2",
     "body-parser": "^1.13.3",
     "ejs": "^2.3.3",
-    "express-session":"^1.15.6" 
+    "express-session":"^1.15.6"
   },
   "devDependencies": {},
   "scripts": {
