@@ -14,6 +14,7 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', function(req, res) {
+  res.render('static/index')
 })
 
 app.get('/first', function(req, res) {
