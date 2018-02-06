@@ -39,7 +39,7 @@ $(document).ready(function() {
       value: 50,
       change: function ( event, ui ) {
           document.getElementById("beat0").volume = (ui.value/100);
-          $("#volume").html(ui.value)
+          $("#volume0").html(ui.value)
         }
   });
 
