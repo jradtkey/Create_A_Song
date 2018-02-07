@@ -31,9 +31,13 @@ $(document).ready(function() {
 
 
   $('#button').click(function() {
-    console.log(play);
+
+    if (true) {
+
+    }
+
     if (!play) {
-      $('#toggle').html('<i class="fas fa-pause-circle"></i>');
+      $('#toggle').html('<i class="fas fa-stop-circle"></i>');
       play = true;
       beat0.play();
       beat1.play();
@@ -47,9 +51,11 @@ $(document).ready(function() {
       beat1.pause();
       beat2.pause();
       beat3.pause();
+      beat0.currentTime = 0;
+      beat1.currentTime = 0;
+      beat2.currentTime = 0;
+      beat3.currentTime = 0;
     }
-
-    console.log(play);
 
   })
 
