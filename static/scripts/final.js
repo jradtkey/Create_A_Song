@@ -8,10 +8,10 @@ $(document).ready(function() {
   beat1.currentTime = 0;
   beat2.currentTime = 0;
   beat3.currentTime = 0;
-  beat0.volume = .5;
-  beat1.volume = .5;
-  beat2.volume = .5;
-  beat3.volume = .5;
+  beat0.volume = .7;
+  beat1.volume = .75;
+  beat2.volume = .35;
+  beat3.volume = .4;
   var size_bass = document.getElementById('bass');
   var size_drums = document.getElementById('drums');
   var size_sample = document.getElementById('sample');
@@ -60,17 +60,15 @@ $(document).ready(function() {
   })
 
   $("#slider0").slider({
-      value: 50,
+      value: 70,
       change: function ( event, ui ) {
           document.getElementById("beat0").volume = (ui.value/100);
           $("#volume0").html(ui.value)
         }
   });
 
-  $("#button").hover(console.log("hovered"));
-
   $("#slider1").slider({
-      value: 50,
+      value: 75,
       change: function ( event, ui ) {
           document.getElementById("beat1").volume = (ui.value/100);
           $("#volume1").html(ui.value)
@@ -78,7 +76,7 @@ $(document).ready(function() {
   });
 
   $("#slider2").slider({
-      value: 50,
+      value: 35,
       change: function ( event, ui ) {
           document.getElementById("beat2").volume = (ui.value/100);
           $("#volume2").html(ui.value)
@@ -86,7 +84,7 @@ $(document).ready(function() {
   });
 
   $("#slider3").slider({
-      value: 50,
+      value: 40,
       change: function ( event, ui ) {
           document.getElementById("beat3").volume = (ui.value/100);
           $("#volume3").html(ui.value)
