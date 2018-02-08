@@ -12,10 +12,10 @@ $(document).ready(function() {
   beat1.volume = .5;
   beat2.volume = .5;
   beat3.volume = .5;
-  var size_bass = document.getElementById('bass')
-  var size_drums = document.getElementById('drums')
-  var size_sample = document.getElementById('sample')
-  var size_keyboard = document.getElementById('keyboard')
+  var size_bass = document.getElementById('bass');
+  var size_drums = document.getElementById('drums');
+  var size_sample = document.getElementById('sample');
+  var size_keyboard = document.getElementById('keyboard');
   var play = false;
 
   //styling for shorter instruments
