@@ -23,7 +23,6 @@ app.get('/first', function(req, res) {
 app.post('/second', function(req, res) {
   req.session.band = [req.body.bass]
   var band = req.session.band
-  console.log(band);
   res.render('second', {band: req.body})
 })
 
@@ -44,7 +43,6 @@ app.post('/final', function(req, res) {
   for (var i = 0; i < band.length; i++) {
     arr.push(band[i].split(" "));
   }
-  console.log(arr);
   band = arr
   res.render('final', {band: band})
 
