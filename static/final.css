@@ -55,6 +55,18 @@ body {
     outline: none;
 }
 
+.btn{
+  border-radius: 10px;
+}
+
+.btn:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    border-color: #bfa67a;
+    color: none;
+    border-radius: 10px;
+    background-color: Transparent;
+    outline: none;
+}
+
 .fas {
   font-size: 10em;
 }
