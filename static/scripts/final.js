@@ -18,18 +18,7 @@ $(document).ready(function() {
   var size_keyboard = document.getElementById('keyboard');
   var play = false;
 
-  //styling for shorter instruments
-  console.log("Drums:", size_bass.clientHeight-size_drums.clientHeight);
-  console.log("Bass:", size_bass.clientHeight);
-  console.log("Drums:", size_drums.clientHeight);
-  console.log("Sample:", size_bass.clientHeight-size_sample.clientHeight);
-  console.log("Keyboard:", size_bass.clientHeight-size_keyboard.clientHeight);
 
-  $( window ).resize(function() {
-    $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
-    $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
-    $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
-  });
 
 
   $('#button').click(function() {
@@ -96,6 +85,14 @@ $(document).ready(function() {
   $('.pull-down').each(function() {
     var $this = $(this);
     $this.css('margin-top', $this.parent().height() - $this.height())
+  });
+
+  //styling for shorter instruments
+
+  $( window ).resize(function() {
+    $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
+    $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
+    $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
   });
 
 
