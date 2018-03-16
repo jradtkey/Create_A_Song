@@ -24,9 +24,6 @@ $(document).ready(function() {
   console.log("Drums:", size_drums.clientHeight);
   console.log("Sample:", size_bass.clientHeight-size_sample.clientHeight);
   console.log("Keyboard:", size_bass.clientHeight-size_keyboard.clientHeight);
-  $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
-  $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
-  $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
 
   $( window ).resize(function() {
     $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
@@ -101,5 +98,9 @@ $(document).ready(function() {
     $this.css('margin-top', $this.parent().height() - $this.height())
   });
 
+
+  $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
+  $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
+  $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
 
 })
