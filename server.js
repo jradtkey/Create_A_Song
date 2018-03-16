@@ -17,6 +17,7 @@ app.get('/', function(req, res) {
 })
 
 app.get('/first', function(req, res) {
+  req.session.band = ''
   res.render('first')
 })
 
