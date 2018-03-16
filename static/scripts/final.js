@@ -20,6 +20,8 @@ $(document).ready(function() {
 
   //styling for shorter instruments
   console.log("Drums:", size_bass.clientHeight-size_drums.clientHeight);
+  console.log("Bass:", size_bass.clientHeight);
+  console.log("Drums:", size_drums.clientHeight);
   console.log("Sample:", size_bass.clientHeight-size_sample.clientHeight);
   console.log("Keyboard:", size_bass.clientHeight-size_keyboard.clientHeight);
   $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
