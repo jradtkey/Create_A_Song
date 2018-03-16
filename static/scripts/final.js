@@ -23,11 +23,11 @@ $(document).ready(function() {
   $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
   $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
 
-  $( window ).resize(function() {
-    $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
-    $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
-    $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
-  });
+  // $( window ).resize(function() {
+  //   $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
+  //   $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
+  //   $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
+  // });
 
 
   $('#button').click(function() {
