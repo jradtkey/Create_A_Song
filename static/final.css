@@ -57,6 +57,7 @@ body {
 
 .btn{
   border-radius: 10px;
+  background-color: #bfa67a;
 }
 
 .btn:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
