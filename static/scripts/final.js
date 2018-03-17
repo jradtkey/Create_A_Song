@@ -95,9 +95,18 @@ $(document).ready(function() {
     $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
   });
 
+  function displayCSS() {
+    console.log('running');
+    $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
+    $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
+    $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
+  }
 
-  $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
-  $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
-  $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
+  // $( "#click" ).click(function() {
+  //   console.log('clicked');
+  //   ;
+  // });
+
+  setTimeout(function () {displayCSS()}, 300);
 
 })
