@@ -96,7 +96,6 @@ $(document).ready(function() {
   });
 
   function displayCSS() {
-    console.log('running');
     $('#drums').css('margin-top', (size_bass.clientHeight-size_drums.clientHeight)+'px');
     $('#sample').css('margin-top', (size_bass.clientHeight-size_sample.clientHeight)+'px');
     $('#keyboard').css('margin-top', (size_bass.clientHeight-size_keyboard.clientHeight)+'px');
